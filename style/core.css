@@ -23,7 +23,7 @@ body {
 h1 {
     color: #ddd;
     font-size: 38px;
-    line-height: .3em;
+    line-height: 1em;
     font-weight: 100;
 }
 
@@ -50,7 +50,7 @@ p {
 
 #nav-bar {
     position: fixed;
-    min-height: 140px;
+    min-height: 100px;
     width: 100vw;
     z-index: 10;
     background-color: rgba(0,0,0, 0.6);
@@ -151,6 +151,7 @@ canvas {
     position: absolute;
     text-align: center;
     line-height: 0.4em;
+    padding: 20px;
 }
 
 .topnav {
@@ -190,17 +191,32 @@ canvas {
 @media screen and (max-width: 900px) {
     #nav-bar {
         padding-top: 20px;
+        padding-bottom: 10px;
         flex-direction: column;
     }
 }
 
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     #nav-bar {
-        padding-top: 30px;
         flex-direction: column;
     }
-    .topnav {min-height: 0}
-    .topnav a {display: none;}
+    .btext p {
+        font-size: 16px;
+    }
+
+    .btext span {
+        font-size: 34px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    h1 {
+        font-size: 28px;
+    }
+    #nav-bar {min-height: 0px;}
+    .topnav {min-height: 0;}
+    .topnav a {display: none; height: 0;}
     .topnav a.icon {
       float: right;
       display: block;
@@ -220,4 +236,36 @@ canvas {
       display: block;
       text-align: left;
     }
-  }
+}
+
+@media screen and (max-width: 360px) {
+    #nav-bar {
+        min-height: 60px;
+        z-index: 1;
+        position: absolute;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+
+    .btext p {
+        font-size: 16px;
+    }
+
+    .btext span {
+        font-size: 34px;
+    }
+}
+
+
+@media screen and (max-width: 330px) {
+    h1 {
+        font-size: 16px;
+    }
+    #nav-logo img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
