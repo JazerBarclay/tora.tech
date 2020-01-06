@@ -1,0 +1,223 @@
+@charset "utf-8";
+/* Element Core */
+
+html{
+  padding: 0px;
+  margin: 0px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+
+  background-color: #23262a;
+  font-family: Arial, Helvetica, Sans-Serif;
+}
+
+body {
+  padding: 0em;
+  margin: 0em;
+  display: grid;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  grid-template-areas: "head main"
+                       "head foot";
+  grid-template-rows: auto 130px;
+  grid-template-columns: 330px 1fr;
+
+
+  @media (max-width: 90em) {
+    main {
+      grid-area: main;
+      background-color: #ffffff;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 300px auto auto auto 300px auto;
+      padding: 2em;
+      grid-gap: 1em;
+      grid-template-areas: "element1"
+                           "element2"
+                           "element3"
+                           "element4"
+                           "element5"
+                           "element6";
+      text-align: center;
+    }
+    .main-element {
+      font-size: 14pt;
+    }
+
+    #el2{margin-top: -2em;}
+    #el3{margin-top: -2em; margin-left: 0em; margin-right: 0em;}
+    #el6{margin-top: -2em;}
+
+  }
+
+  @media (max-width: 62em) {
+    grid-template-areas: "head"
+                         "main"
+                         "foot";
+    grid-template-rows: auto auto 130px;
+    grid-template-columns: 1fr;
+
+    header {
+      grid-area: head;
+      min-height: 400px;
+      min-width: 330px;
+      position: relative;
+      background-color: #23262a;
+      color: #fefefe;
+
+      display: grid;
+      grid-gap: 0;
+      grid-template-rows: 260px 75px 40px 0px 0px;
+      grid-template-areas: "hicon" "htitle" "hsubtitle" "." "hcontact";
+      overflow: visible;
+    }
+
+    #head-title {
+      min-height: 50px;
+    }
+
+    #head-subtitle {
+      font-size: 12pt;
+      min-width: 240px;
+    }
+
+    #head-contact {
+      opacity: 0;
+      grid-area: hcontact;
+      min-height: 0px;
+      max-height: 0px;
+
+    }
+
+    main {
+      grid-area: main;
+      background-color: #ffffff;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 300px auto auto auto 300px auto;
+      padding: 2em;
+      grid-gap: 1em;
+      grid-template-areas: "element1"
+                           "element2"
+                           "element3"
+                           "element4"
+                           "element5"
+                           "element6";
+      text-align: center;
+    }
+
+    .foot-container {
+      font-size: 10pt;
+    }
+
+    #el1{margin-top: -2em; margin-left: -2em; margin-right: -2em;}
+    #el2{margin-top: -2em; margin-left: -2em; margin-right: -2em;}
+    #el3{margin-top: -2em; margin-left: -2em; margin-right: -2em;}
+    #el4{margin-left: -2em; margin-right: -2em;}
+    #el5{margin-left: -2em; margin-right: -2em;}
+    #el6{margin-top: -2em; margin-left: -2em; margin-right: -2em;}
+
+  }
+}
+
+header {
+  grid-area: head;
+  min-height: 100vh;
+  min-width: 330px;
+  position: fixed;
+  background-color: #23262a;
+  color: #fefefe;
+
+  display: grid;
+  grid-gap: 0;
+  grid-template-rows: 260px 75px 40px 1fr 200px;
+  grid-template-areas: "hicon" "htitle" "hsubtitle" "." "hcontact";
+  overflow: visible;
+}
+
+#head-icon {
+  grid-area: hicon;
+  min-height: 240px;
+}
+
+#head-title {
+  grid-area: htitle;
+  min-height: 60px;
+}
+
+#head-subtitle {
+  grid-area: hsubtitle;
+  min-height: 40px;
+  font-size: 14pt;
+}
+
+#head-contact {
+  grid-area: hcontact;
+  min-height: 240px;
+}
+
+.head-container {
+	justify-self: center;
+	align-self: start;
+  text-align: center;
+}
+
+header h1 {
+  align-self: center;
+  justify-self: center;
+	font-size: 40px;
+}
+
+header h2 {
+  align-self: center;
+  justify-self: center;
+	font-size: 28px;
+}
+
+main {
+  grid-area: main;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px auto 300px;
+  padding: 2em;
+  grid-gap: 1em;
+  grid-template-areas: "element1 element1 element1"
+                       "element2 element3 element4"
+                       "element5 element6 element6";
+                       text-align: center;
+}
+
+.main-element {
+  padding: 1em;
+  font-size: 15pt;
+}
+
+#el1{grid-area: element1; background-color: #fafafa; text-align: right;}
+#el2{grid-area: element2; background-color: #fafafa; text-align: center; margin-top: -1em;}
+#el3{grid-area: element3; background-color: #fafafa; text-align: center; margin-top: -1em; margin-left: -1em; margin-right: -1em;}
+#el4{grid-area: element4; background-color: #fafafa; text-align: center; margin-top: -1em;}
+#el5{grid-area: element5; background-color: #fafafa; text-align: right;}
+#el6{grid-area: element6; background-color: #fafafa; text-align: left;}
+#el7{grid-area: element7; background-color: #fafafa; text-align: left; margin-left: -1em; margin-right: -1em;}
+#el8{grid-area: element8; background-color: #fafafa; text-align: left; margin-left: -1em; margin-right: -1em;}
+#el9{grid-area: element9; background-color: #fafafa; text-align: left; margin-left: -1em; margin-right: -1em;}
+
+footer {
+  grid-area: foot;
+  background-color: #23262a;
+  color: #fefefe;
+  display: grid;
+  min-height: 100px;
+}
+
+.foot-container {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  line-height: 1.5;
+  min-width: 240px;
+}
