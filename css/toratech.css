@@ -1,0 +1,226 @@
+@charset "utf-8";
+/* Element Core */
+
+html, body {
+	padding: 0px;
+	margin: 0px;
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+	height: 100%;
+
+	background-color: #fff;
+}
+
+body {
+		overflow: visible;
+		overflow-x: auto;
+		overflow-y: auto;
+}
+
+* { flex-shrink: 0; }
+
+.toratech-colour {
+	background: #555;
+}
+
+.toratech-max-width {
+	max-width: 1280px;
+}
+
+.layout-test {
+
+}
+
+.layout-test .page {
+	text-align: center;
+	width: 100%;
+
+	flex: 0 0 auto;
+	-webkit-flex: 0 0 auto;
+}
+
+.wrapper {
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+
+	text-align: center;
+
+	overflow: visible;
+
+	z-index: 2;
+}
+
+.flex-test {
+	height: 100%;
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: column;
+	-webkit-flex-flow: column;
+}
+
+.flex-test .header {
+	text-align: center;
+	flex: 0 0 auto;
+	-webkit-flex: 0 0 auto;
+}
+
+.flex-test .cont {
+	text-align: center;
+	flex: 1 0 auto;
+	-webkit-flex: 1 0 auto;
+}
+
+.flex-test .page {
+	flex: 1 0 auto;
+	-webkit-flex: 1 0 auto;
+	margin: auto;
+	width: 100%;
+	min-height: auto;
+	max-width: 1280px;
+}
+
+.flex-test .footer {
+	text-align: center;
+	flex: 0 0 20px;
+	-webkit-flex: 0 0 20px;
+}
+
+.page-layout {
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	overflow: visible;
+	overflow-x: auto;
+	overflow-y: auto;
+
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: column;
+	-webkit-flex-flow: column;
+}
+
+.page-layout .header {
+	text-align: center;
+	width: 100%;
+
+	flex: 0 0 auto;
+	-webkit-flex: 0 0 auto;
+}
+
+.page-layout .page {
+	text-align: center;
+	width: 100%;
+
+	flex: 1 0 auto;
+	-webkit-flex: 1 0 auto;
+}
+
+.page-layout .page .content {
+	margin: auto;
+	padding: 10px;
+	overflow: visible;
+}
+
+.page-layout .footer {
+	text-align: center;
+	flex: 0 0 20px;
+	-webkit-flex: 0 0 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.hLayout {
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: column;
+	-webkit-flex-flow: column;
+}
+
+.hLayout .pane {
+	flex: 0 1 auto;
+	-webkit-flex: 0 1 auto;
+}
+
+.vLayout {
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row;
+	-webkit-flex-flow: row;
+}
+
+.vLayout .pane {
+	flex: 1 0 auto;
+	-webkit-flex: 1 0 auto;
+}
+
+.vLayout .icon {
+	flex: 0 2 auto;
+	-webkit-flex: 0 2 auto;
+}
+
+.logo_container {
+	padding: 0px;
+	margin: auto;
+	background-color: #a1a1a1;
+	max-width: 1280px;
+	max-height: 1280px;
+}
+
+.wcontainer {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1280px;
+}
+
+#backdrop {
+	background-color: black;
+	background-image: url('../img/fb_back_tmp.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
+	background-size: cover;
+}
+
+#banner {
+	height: 90%;
+	min-height: 500px;
+	max-height: 1080px;
+}
+
+#outer {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+#inner {
+
+}
+
+#outer::before {
+    display: block;
+    content: "";
+    height: 10%;
+}
+#outer::after {
+    display: block;
+    content: "";
+    height: 20%;
+}
+#inner {
+    height: 70%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#article-content {
+	font-size: 32px;
+	@media (min-width: 52em) {
+		font-size: 20px;
+	}
+}
