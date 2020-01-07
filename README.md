@@ -6,7 +6,7 @@ Table of Contents
 =================
    * **[Server Build](#server-build)**
       * [Universe Repository](#add-universe-repository)
-      * [Update & Upgrade](#update,-upgrade-and-remove-old)
+      * [Update & Upgrade](#update-upgrade-and-remove-old)
       * [Install Packages](#install-packages)
       * [Set the Hostname](#set-the-hostname)
       * [Add Groups](#add-the-wheel-and-dev-groups)
