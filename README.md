@@ -1,5 +1,7 @@
 # Tora Tech Website
 
+![Screenshot](images/site-screenshot.png?raw=true "Website")
+
 ## Server Build - Setting Up the Linode Instance
 ### Make sure the root password is set
 You want to run this if you have already got a profile and have yet to setup the root password
