@@ -22,6 +22,7 @@ Table of Contents
       * [Reboot System](#reboot-system-to-restart-all-services-with-the-updates)
    * **[Configure Website](#configure-website)**
       * [Setting Up Nginx Server Block](#setting-up-nginx-server-block)
+      * [Link to Active List](#link-to-active-list)
 
 ## Server Build
 ### Make sure the root password is set
@@ -44,7 +45,10 @@ apt update && apt -y dist-upgrade && apt -y autoremove
 ```
 
 ### Install Packages
-Vim, curl and git are very useful when needing to download, edit and pull repositories to your server. Unattended upgrades, fail2ban and ubuntu firewall are vital to ensure the system is secure against attackers and keeping the system up to date when not being adminstered.
+Vim, curl and git are very useful when needing to download, edit and pull repositories to your server.
+
+Unattended upgrades, fail2ban and ubuntu firewall are vital to ensure the system is secure against attackers and keeping the system up to date when not being adminstered.
+
 We will be installing nginx for the hosting platformm mysql for the database and php for a more flexible layout.
 ```
 apt -y install vim curl git git-core unattended-upgrades fail2ban ufw nginx mysql-server php-fpm php-mysql
@@ -129,9 +133,12 @@ reboot
 
 ## Configure Website
 ### Setting Up Nginx Server Block
-
+We will need to setup a server block for nginx to manage the site config.
 ```
-
+vim /etc/nginx/sites-available/tora.tech
+```
+And add the configuration
+```
 server {
 
         listen 80 default_server;
@@ -165,6 +172,10 @@ server {
                 deny all;
         }
 }
+```
 
-
+### Link to Active List
+now we can link this config to the active list
+```
+sudo ln -s /etc/nginx/sites-available/tora.tech /etc/nginx/sites-enabled/
 ```
