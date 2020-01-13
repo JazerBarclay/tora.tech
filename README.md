@@ -23,6 +23,7 @@ Table of Contents
    * **[Configure Website](#configure-website)**
       * [Setting Up Nginx Server Block](#setting-up-nginx-server-block)
       * [Link to Active List](#link-to-active-list)
+      * [Generate SSL Certificate](#generate-certificate)
 
 ## Server Build
 ### Make sure the root password is set
@@ -185,4 +186,3 @@ Now the site is setup, we need to generate an SSL certificate to secure the webs
 ```
 certbot --nginx -d tora.tech -d www.tora.tech
 ```
-
