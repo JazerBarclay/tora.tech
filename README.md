@@ -51,7 +51,7 @@ Unattended upgrades, fail2ban and ubuntu firewall are vital to ensure the system
 
 We will be installing nginx for the hosting platform, mysql for the database and php for a more flexible layout.
 ```
-apt -y install vim curl git git-core unattended-upgrades fail2ban ufw nginx mysql-server php-fpm php-mysql
+apt -y install vim curl git git-core unattended-upgrades fail2ban ufw nginx mysql-server php-fpm php-mysql certbot
 ```
 
 ### Set the Hostname
