@@ -49,13 +49,13 @@ Vim, curl and git are very useful when needing to download, edit and pull reposi
 
 Unattended upgrades, fail2ban and ubuntu firewall are vital to ensure the system is secure against attackers and keeping the system up to date when not being adminstered.
 
-We will be installing nginx for the hosting platformm mysql for the database and php for a more flexible layout.
+We will be installing nginx for the hosting platform, mysql for the database and php for a more flexible layout.
 ```
 apt -y install vim curl git git-core unattended-upgrades fail2ban ufw nginx mysql-server php-fpm php-mysql
 ```
 
 ### Set the Hostname
-Sets the hostname of the system.
+Now let's set the hostname of the system.
 ```
 hostnamectl set-hostname tora.tech
 ```
@@ -179,3 +179,10 @@ now we can link this config to the active list
 ```
 sudo ln -s /etc/nginx/sites-available/tora.tech /etc/nginx/sites-enabled/
 ```
+
+### Generate Certificate
+Now the site is setup, we need to generate an SSL certificate to secure the website. We will generate one with certbot
+```
+certbot --nginx -d tora.tech -d www.tora.tech
+```
+
