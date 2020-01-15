@@ -1,6 +1,6 @@
 # Tora Tech Website
 
-![Screenshot](images/site-screenshot.png?raw=true "Website")
+![Screenshot](public_html/images/site-screenshot.png?raw=true "Website")
 
 Table of Contents
 =================
