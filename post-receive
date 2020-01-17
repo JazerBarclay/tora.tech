@@ -1,0 +1,14 @@
+echo "Deploying to live tora.tech website"
+
+# Set deploy location
+deploylocation=/var/www/toratech
+
+# Empty current working directory
+rm -rf $deploylocation/*
+
+# Set git work tree and checkout all files
+GIT_WORK_TREE=$deploylocation git checkout -f
+
+# Set file permissions so nginx can serve files
+chown -R jazer:dev $deploylocation/public_html
+chmod -R 755 $deploylocation/public_html
